@@ -1,0 +1,48 @@
+.meeting-planner-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .meeting-form {
+    flex: 1;
+    max-width: 400px;
+    margin-right: 20px;
+  }
+  
+  .meeting-list {
+    flex: 1;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
