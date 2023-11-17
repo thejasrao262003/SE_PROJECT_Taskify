@@ -104,3 +104,26 @@ h1 {
 .create-btn:hover {
   background-color: #45a049;
 }
+
+.delete-btn {
+  background-color: #ff6961;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Priority Colors */
+.low-priority {
+  color: #5bc0de;
+}
+
+.medium-priority {
+  color: #f0ad4e;
+}
+
+.high-priority {
+  color: #d9534f;
+}
