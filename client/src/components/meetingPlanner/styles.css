@@ -1,48 +1,128 @@
+
 .meeting-planner-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-  }
-  
-  .meeting-form {
-    flex: 1;
-    max-width: 400px;
-    margin-right: 20px;
-  }
-  
-  .meeting-list {
-    flex: 1;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-  }
-  
-  button {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  li {
-    margin-bottom: 10px;
-  }
-  
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 20px;
+}
+
+/* Meeting Form styling */
+.meeting-form {
+  width: 40%;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.meeting-form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Meeting List styling */
+.meeting-list {
+  width: 50%;
+}
+
+.meeting-list h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Add additional styling as needed */
+.meeting-list {
+  width: 50%;
+}
+
+.meeting-list h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Style for each meeting box */
+.meeting-box {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.meeting-box:hover {
+  transform: scale(1.05);
+}
+
+/* Add this to your existing styles.css or create a new CSS file */
+.meeting-list {
+  margin-top: 20px;
+}
+
+.meeting-box {
+  border: 2px solid #3498db; /* Peter River */
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.meeting-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.8); /* Peter River with opacity */
+}
+
+.meeting-box strong {
+  color: #3498db; /* Peter River */
+}
+
+.meeting-box button {
+  background-color: #e74c3c; /* Alizarin */
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.meeting-box button:hover {
+  background-color: #c0392b; /* Pomegranate */
+}

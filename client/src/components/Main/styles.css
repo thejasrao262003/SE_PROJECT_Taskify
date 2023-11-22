@@ -12,7 +12,7 @@ h1 {
 }
 
 .kanban-container {
-  max-width: 1200px;
+  max-width: 1350px;
   margin: 20px auto;
   padding: 20px;
   background-color: #e0e0e0;
@@ -71,15 +71,7 @@ h1 {
   transform: scale(1.02);
 }
 
-.input-field {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
+.input-field,
 .select-field {
   width: 100%;
   padding: 10px;
@@ -87,7 +79,6 @@ h1 {
   border: 1px solid #ddd;
   border-radius: 4px;
   box-sizing: border-box;
-  background-color: #fff;
 }
 
 .create-btn {

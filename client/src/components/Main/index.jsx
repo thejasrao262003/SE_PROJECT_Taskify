@@ -137,7 +137,9 @@ const KanbanBoard = () => {
                     className="task"
                   >
                     <div>
-                      {task.Task_Name} ({task.Employee_name}, {task.Priority})
+                      <strong>Task Name:</strong> {task.Task_Name} <br />
+                      <strong>Team Member:</strong> {task.Employee_name} <br />
+                      <strong>Priority:</strong> {task.Priority}
                     </div>
                     <button onClick={() => handleDeleteTask(task.Task_ID)} className="delete-btn">
                       Delete
@@ -166,7 +168,9 @@ const KanbanBoard = () => {
                     className="task"
                   >
                     <div>
-                      {task.Task_Name} ({task.Employee_name}, {task.Priority})
+                      <strong>Task Name:</strong> {task.Task_Name} <br />
+                      <strong>Team Member:</strong> {task.Employee_name} <br />
+                      <strong>Priority:</strong> {task.Priority}
                     </div>
                     <button onClick={() => handleDeleteTask(task.Task_ID)} className="delete-btn">
                       Delete
@@ -195,7 +199,9 @@ const KanbanBoard = () => {
                     className="task"
                   >
                     <div>
-                      {task.Task_Name} ({task.Employee_name}, {task.Priority})
+                      <strong>Task Name:</strong> {task.Task_Name} <br />
+                      <strong>Team Member:</strong> {task.Employee_name} <br />
+                      <strong>Priority:</strong> {task.Priority}
                     </div>
                     <button onClick={() => handleDeleteTask(task.Task_ID)} className="delete-btn">
                       Delete
