@@ -3,6 +3,7 @@ import Main from "./components/Main";
 import Signup from "./components/Singup";
 import Login from "./components/login";
 import MeetingPlanner from "./components/meetingPlanner";
+import DiscussionForum from "./components/discussionForum";
 function App() {
 	const user = localStorage.getItem("token");
 
@@ -13,6 +14,7 @@ function App() {
 			<Route path="/login" exact element={<Login />} />
 			<Route path="/" element={<Navigate replace to="/login" />} />
 			<Route path = "/meeting-planner" exact element={<MeetingPlanner/>}/>
+			<Route path = "/discussionForum" exact element={<DiscussionForum/>}/>
 		</Routes>
 	);
 }

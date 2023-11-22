@@ -1,3 +1,5 @@
+// DiscussionForum.jsx
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Navbar from '../navbar/navbar';
@@ -10,6 +12,7 @@ const DiscussionForum = () => {
     From: '',
     To: '',
     Priority: 'Low',
+    Query: '',
   });
 
   useEffect(() => {
@@ -40,10 +43,14 @@ const DiscussionForum = () => {
       // Reload the page after successfully creating a discussion
       window.location.reload();
     } catch (error) {
+      console.error("Error creating discussion:", error);
+
       if (error.response && error.response.status >= 400 && error.response.status <= 500) {
         setError(error.response.data.message);
+        console.error("Server response:", error.response.data);
+      } else {
+        setError("An unexpected error occurred. Please try again later.");
       }
-      console.error("Error creating discussion:", error);
     }
 
     setNewDiscussion({
@@ -51,6 +58,7 @@ const DiscussionForum = () => {
       From: "",
       To: "",
       Priority: "Low",
+      Query: "",
     });
   };
 
@@ -83,7 +91,9 @@ const DiscussionForum = () => {
                     <strong>Discussion ID:</strong> {discussion.Discussion_ID} <br />
                     <strong>From:</strong> {discussion.From} <br />
                     <strong>To:</strong> {discussion.To} <br />
-                    <strong>Priority:</strong> {discussion.Priority}
+                    <strong>Priority:</strong> {discussion.Priority} <br />
+                    <strong>Query:</strong>
+                    <div className="query-field">{discussion.Query}</div>
                   </div>
                   <button onClick={() => handleDeleteDiscussion(discussion.Discussion_ID)} className="delete-btn">
                     Delete
@@ -140,6 +150,17 @@ const DiscussionForum = () => {
                 <option value="High">High</option>
               </select>
             </label>
+            <label>
+              Query:
+              <input
+                type="textarea"
+                name="Query"
+                value={newDiscussion.Query}
+                onChange={handleInputChange}
+                className="textarea-field"
+              />
+            </label>
+            {error && <div className="error-msg">{error}</div>}
             <button onClick={handleCreateDiscussion} className="create-btn">Create Discussion</button>
           </div>
         </div>

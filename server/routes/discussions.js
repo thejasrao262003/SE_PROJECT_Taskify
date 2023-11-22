@@ -15,9 +15,9 @@ router.get("/", async (req, res) => {
 // Create a new discussion
 router.post("/", async (req, res) => {
   try {
-    const { Discussion_ID, From, To, Priority } = req.body;
+    const { Discussion_ID, From, To, Priority, Query } = req.body;
 
-    if (!Discussion_ID || !From || !To || !Priority) {
+    if (!Discussion_ID || !From || !To || !Priority || !Query) {
       return res.status(400).send({ message: "Incomplete discussion information" });
     }
 
@@ -26,6 +26,7 @@ router.post("/", async (req, res) => {
       From,
       To,
       Priority,
+      Query,
     });
 
     await newDiscussion.save();

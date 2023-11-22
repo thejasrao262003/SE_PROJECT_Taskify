@@ -12,7 +12,7 @@ const Navbar = () => {
           <li><Link to="/">Home</Link></li>
           <li><Link to="/">Kanban</Link></li>
           <li><Link to="/meeting-planner">Meeting Planner</Link></li>
-          <li><Link to="/discussion-forum" component={DiscussionForum}>Discussion Forum</Link></li>
+          <li><Link to="/discussionForum" >Discussion Forum</Link></li>
         </ul>
       </div>
     </nav>

@@ -5,7 +5,8 @@ const discussionSchema = new mongoose.Schema({
   From: { type: String, required: true },
   To: { type: String, required: true },
   Priority: { type: String, required: true },
+  Query: { type:String, required: true},
 });
 
 const Discussion = mongoose.model("discussion", discussionSchema);
-module.exports = Task;
+module.exports = Discussion;

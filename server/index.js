@@ -8,6 +8,7 @@ const authRoutes = require("./routes/auth");
 const logoutRoutes = require("./routes/logout");
 const tasksRoutes = require("./routes/tasks");
 const meetingRoutes = require("./routes/meetings")
+const discussion = require("./routes/discussions")
 const router = express.Router();
 // database connection
 connection();
@@ -23,5 +24,6 @@ app.use("/api/auth", authRoutes);
 app.use("/api/logout", logoutRoutes);
 app.use("/api/tasks", tasksRoutes);
 app.use("/api/meetings", meetingRoutes);
+app.use("/api/discussions", discussion);
 const port = process.env.PORT || 8080;
 app.listen(port, console.log(`Listening on port ${port}...`));
